@@ -6,8 +6,6 @@ After that i took some time to scale it over **imdb** datset and then moved to *
 
 I have tried many things to optimise it not to overfit but it still does after 8-9 epochs. I ran it on goggle collab using t4-gpu because it was taking a veryy long time on vs code. Some of the optimisation done was intially I was using each and every word in the review as a candidate for vocab but their might be some words which are typos or some might be moive specific like some character so only words which appear atleast 10 times are used in vocab which incresed the accuracy, did regularisation by adding a dropout layer before the final linear layer and after lstm output, using packed_pad_sequence instead of pad_sequence.
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/0a5073f7-19ba-46ef-b809-242ec8d50f8a" />
-
 # Tokenization
 
 Tokenization is an essential NLP technique that involves breaking down a larger stream of text into smaller textual units called **tokens**. These tokens can represent words, subwords, characters, or even phrases, depending on the level of decomposition required.
