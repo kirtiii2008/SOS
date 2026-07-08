@@ -235,3 +235,14 @@ Without this expansion, the model would have significantly less capacity.
 
 - **Self-Attention:** Every token communicates with every other token.
 - **Feed Forward Network:** Every token independently processes the information it has just gathered.
+
+## Strcuture of a decoder
+
+The following steps repeat the process until a special symbol is reached indicating the transformer decoder has completed its output. The output of each step is fed to the bottom decoder in the next time step, and the decoders passes their decoding results just like the encoders did. and just like we did with the encoder inputs, we embed and add positional encoding to those decoder inputs to indicate the position of each word.
+
+The self attention layers in the decoder operate in a slightly different way than the one in the encoder
+
+In the decoder, the self-attention layer is only allowed to attend to earlier positions in the output sequence. This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation.
+
+The “Encoder-Decoder Attention” layer works just like multiheaded self-attention, except it creates its Queries matrix from the layer below it, and takes the Keys and Values matrix from the output of the encoder stack.
+
