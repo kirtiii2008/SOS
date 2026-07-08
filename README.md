@@ -8,7 +8,7 @@ I have tried many things to optimise it not to overfit but it still does after 8
 
 Did regularisation by adding a dropout layer before the final linear layer and after lstm output, using packed_pad_sequence instead of pad_sequence.
 
-The graph of test,train accuracy vs epochs is shown in the graph.png also running this code will anyways generate it.
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/0a5073f7-19ba-46ef-b809-242ec8d50f8a" />
 
 # Tokenization
 
@@ -162,7 +162,7 @@ The final output of the attention layer is called the **Z matrix**, whose shape 
 (sequence_length, value_dimension)
 ```
 
-<img width="1406" height="684" alt="image" src="https://github.com/user-attachments/assets/417b8698-72d1-49e1-a4ac-1fe7c78b56e7" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/417b8698-72d1-49e1-a4ac-1fe7c78b56e7" />
 
 ---
 
@@ -190,7 +190,7 @@ Finally, this concatenated matrix is multiplied by another learnable projection 
 
 This allows the model to combine information learned by all attention heads into a single representation.
 
-<img width="1922" height="1060" alt="image" src="https://github.com/user-attachments/assets/82ae408d-185d-4df5-8b87-6984ef2cb03f" />
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/82ae408d-185d-4df5-8b87-6984ef2cb03f" />
 
 ---
 
@@ -237,7 +237,7 @@ The expansion gives the network greater expressive power and allows it to learn 
 
 Without this expansion, the model would have significantly less capacity.
 
-<img width="1482" height="1186" alt="image" src="https://github.com/user-attachments/assets/44e38e63-f9a8-4d80-bec6-026874756411" />
+<img width="600" height="700" alt="image" src="https://github.com/user-attachments/assets/44e38e63-f9a8-4d80-bec6-026874756411" />
 
 ---
 
