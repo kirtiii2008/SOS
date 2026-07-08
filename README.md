@@ -4,9 +4,7 @@ The Real_sentiment.py file has the sentiment model which analyse the movie revie
 In mid term submission i built a **toy_sentiment** with my own vocab of 7-8 words and own training data.
 After that i took some time to scale it over **imdb** datset and then moved to **Transformers**.
 
-I have tried many things to optimise it not to overfit but it still does after 8-9 epochs. I ran it on goggle collab using t4-gpu because it was taking a veryy long time on vs code. Some of the optimisation done was intially I was using each and every word in the review as a candidate for vocab but their might be some words which are typos or some might be moive specific like some character so only words which appear atleast 10 times are used in vocab which incresed the accuracy.
-
-Did regularisation by adding a dropout layer before the final linear layer and after lstm output, using packed_pad_sequence instead of pad_sequence.
+I have tried many things to optimise it not to overfit but it still does after 8-9 epochs. I ran it on goggle collab using t4-gpu because it was taking a veryy long time on vs code. Some of the optimisation done was intially I was using each and every word in the review as a candidate for vocab but their might be some words which are typos or some might be moive specific like some character so only words which appear atleast 10 times are used in vocab which incresed the accuracy, did regularisation by adding a dropout layer before the final linear layer and after lstm output, using packed_pad_sequence instead of pad_sequence.
 
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/0a5073f7-19ba-46ef-b809-242ec8d50f8a" />
 
